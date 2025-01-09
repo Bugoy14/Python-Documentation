@@ -112,8 +112,7 @@ print(', '.join(str(i) for i in even_numbers))
 print("Odd: ", end=' ')
 print(', '.join(str(i) for i in odd_numbers))
 
-# my_list = ["Carl", "Alyssa", "Alieya", "Bugoy", "Lalay", "Ali"]
-#
-# for index, name in enumerate(my_list, start=1):
-#     print(index, name)
+names = ["Carl", "Alyssa", "Alieya", "Bugoy", "Lalay", "Ali"]
 
+for index, name in enumerate(names, start=1):
+    print(f"{index}. {name}")
