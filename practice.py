@@ -48,46 +48,6 @@
 # for item in my_result:
 #     print(item)
 
-
-# class Person:
-#     def __init__(self, first_name, last_name):
-#         self.first_name = first_name
-#         self.last_name = last_name
-#
-#     def introduce(self):
-#         print(f"Hi I am {self.first_name} {self.last_name}")
-#
-#
-# class Student(Person):
-#     def __init__(self, first_name, last_name, section, school_name):
-#         super().__init__(first_name,last_name)
-#         self.section = section
-#         self.school_name = school_name
-#
-#     def introduce(self):
-#         super().introduce()
-#         print(f"I am a student from {self.school_name} and my section is {self.section}")
-#
-#
-# class Employee(Person):
-#     def __init__(self, first_name, last_name, job, years_exp):
-#         super().__init__(first_name,last_name)
-#         self.job = job
-#         self.years_exp = years_exp
-#
-#     def introduce(self):
-#         super().introduce()
-#         print(f"I work as {self.job} and I have {self.years_exp} years of experience")
-#
-#
-# person_one = Person("Bugoy", "Azarcon")
-# student_one = Student("Alyssa", "Villamer", "BSE 4B", "URS-A")
-# employee_one = Employee("Carl", "Azarcon", "Programmer", 1)
-#
-# person_one.introduce()
-# student_one.introduce()
-# employee_one.introduce()
-
 while True:
     try:
         user_input = int(input("Enter number: "))
@@ -116,3 +76,29 @@ names = ["Carl", "Alyssa", "Alieya", "Bugoy", "Lalay", "Ali"]
 
 for index, name in enumerate(names, start=1):
     print(f"{index}. {name}")
+
+
+class Person:
+    def __init__(self, first_name, last_name):
+        self.first_name = first_name
+        self.last_name = last_name
+
+    def introduce(self):
+        print(f"Hi, my name is {self.first_name} {self.last_name}")
+
+
+name_list = []
+while True:
+    user_input = input("Enter first name: ")
+    user_input1 = input("Enter last name: ")
+    person = Person(user_input, user_input1)
+    name_list.append(person)
+
+    choice = input("Continue to add names? yes or no: ").lower()
+    if choice in ['y', 'yes', 'yea']:
+        pass
+    else:
+        break
+
+for name in name_list:
+    name.introduce()
